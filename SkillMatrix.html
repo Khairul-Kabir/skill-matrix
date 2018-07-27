@@ -77,24 +77,24 @@ Add
         <div class="input-group">
         <!-- <div class="input-group-addon"><i class="fa fa-search"></i></div> -->
         <input type="text" class="form-control" placeholder="Search By Name" ng-model="SkillSerach">
-        </div>
+        </div>      
     </div>
 </form>
 
 <table class="table table-bordered table-striped">
-
+    
         <thead>
           <tr>
             <td>
               <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
-                Name
+                Name 
                 <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
                 <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
               </a>
             </td>
             <td>
               <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
-                C#
+                C# 
                 <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
                 <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
               </a>
@@ -125,7 +125,7 @@ Add
             </td>
           </tr>
         </thead>
-
+        
         <tbody>
           <tr ng-repeat="item in items | orderBy:sortType:sortReverse | filter:SkillSerach">
             <td>{{ item.name }}</td>
@@ -138,5 +138,5 @@ Add
             </td>
           </tr>
         </tbody>
-
+        
       </table>

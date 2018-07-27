@@ -1,9 +1,13 @@
 var app = angular.module('SkillMatrix', []); //create model
-app.controller("Book", function ($scope) { //create controller
+app.controller("Skill", function ($scope) { //create controller
 $scope.items = [];
 $scope.addItem = function (item) {  //to add item
-$scope.items.push(item);
-$scope.item = {};
+    if(item.name!=null){
+        $scope.items.push(item);
+        $scope.item = {};
+    }else{
+        alert("Please Enter your Name");
+    }
 },
 $scope.removeItem = function (index) {   //to remove item
 console.log(index);
